@@ -7,16 +7,16 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * pf_spesifier
+ * struct pf_specifier - the structure
  * @s: the string specifier
  * @f: pointer to function for particular specifier
- *
+ * Description: to store the specifier and the function
  */
 typedef struct pf_specifier
 {
 	char *s;
 	int (*f)();
-}pf_sp;
+} pf_sp;
 
 /*The printf specifier*/
 int (*verify_format(const char *s))();
@@ -34,5 +34,9 @@ int print_string(va_list args, char *buffer);
 int print_char(va_list args, char *buffer);
 int print_string(va_list args, char *buffer);
 int print_percent(va_list arg, char *buffer);
+/* Task one functions*/
+int print_i(va_list arg, char *buffer);
+int print_d(va_list arg, char *buffer);
+int print_number(int n, char *buffer);
 
 #endif

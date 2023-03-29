@@ -10,7 +10,9 @@ int (*verify_format(const char *s))()
 	pf_sp options[] = {
 		{"%", print_percent},
 		{"s", print_string},
-		{"c", print_char}
+		{"c", print_char},
+		{"d", print_d},
+		{"i", print_i}
 	};
 	int i;
 	const char *p = s;
@@ -18,7 +20,7 @@ int (*verify_format(const char *s))()
 	p++;
 	if (*p != '\0')
 	{
-		for (i = 0; i < 3; i++)
+		for (i = 0; i < 5; i++)
 		{
 			if (*options[i].s == p[0])
 				return (options[i].f);
