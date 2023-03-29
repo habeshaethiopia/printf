@@ -69,5 +69,5 @@ int buffer_add(char *buff, char c)
 		buff = buff_flush(buff);
 		buff[0] = c;
 	}
-	return(i);
+	return (i);
 }

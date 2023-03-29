@@ -16,7 +16,7 @@ int print_d(va_list arg, char *buff)
 	return (len);
 }
 /**
- * print_num - print numbers
+ * print_number - print numbers
  * @n: argument to print
  * @buff: Buffer
  * Return: length of @arg
