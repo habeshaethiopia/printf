@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	char *buffer = init_buff();
 	va_list arg;
 
-	if(buffer == NULL)
+	if (buffer == NULL)
 		return (0);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{

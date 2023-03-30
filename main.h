@@ -38,5 +38,12 @@ int print_percent(va_list arg, char *buffer);
 int print_i(va_list arg, char *buffer);
 int print_d(va_list arg, char *buffer);
 int print_number(int n, char *buffer);
-
+/* print binary number */
+int print_b(va_list arg, char *buffer);
+/* Task three functions */
+int print_number_u(unsigned int num, char *buff);
+int print_u(va_list arg, char *buff);
+int print_o(va_list arg, char *buff);
+int print_x(va_list arg, char *buff);
+int print_X(va_list arg, char *buff);
 #endif
