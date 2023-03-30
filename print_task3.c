@@ -137,7 +137,7 @@ int print_X(va_list arg, char *buff)
 		if (hex[i] < 10)
 			_putchar(buff, hex[i] + '0');
 		else
-			_putchar(buff, hex[i] % 10+ 'A');
+			_putchar(buff, hex[i] % 10 + 'A');
 		len++;
 	}
 	return (len);
