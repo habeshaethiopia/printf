@@ -58,7 +58,7 @@ int print_o(va_list arg, char *buff)
 {
 	unsigned int num = va_arg(arg, unsigned int);
 	int len, i;
-	int oct[100];
+	int oct[32];
 
 	if (num == 0)
 	{
@@ -87,7 +87,7 @@ int print_x(va_list arg, char *buff)
 {
 	unsigned int num = va_arg(arg, unsigned int);
 	int len, i;
-	int hex[100];
+	int hex[32];
 
 	if (num == 0)
 	{
@@ -120,7 +120,7 @@ int print_X(va_list arg, char *buff)
 {
 	unsigned int num = va_arg(arg, unsigned int);
 	int len, i;
-	int hex[100];
+	int hex[32];
 
 	if (num == 0)
 	{
