@@ -27,7 +27,7 @@ int (*verify_format(const char *s))()
 	p++;
 	if (*p != '\0')
 	{
-		for (i = 0; i < 11; i++)
+		for (i = 0; i < 12; i++)
 		{
 			if (*options[i].s == p[0])
 				return (options[i].f);
