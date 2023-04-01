@@ -17,7 +17,19 @@ typedef struct pf_specifier
 	char *s;
 	int (*f)();
 } pf_sp;
-
+/**
+ * struct flags - struct containing flags to "turn on"
+ * when a flag specifier is passed to _printf()
+ * @plus: flag for the '+' character
+ * @space: flag for the ' ' character
+ * @hash: flag for the '#' character
+ */
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} flags_t;
 /*The printf specifier*/
 int (*verify_format(const char *s))();
 /*the printf function*/
@@ -49,5 +61,6 @@ int print_X(va_list arg, char *buff);
 
 int print_S(va_list arg, char *buff);
 int print_p(va_list arg, char *buff);
+int print_r(va_list arg, char *buff);
 
 #endif
