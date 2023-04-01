@@ -18,7 +18,8 @@ int (*verify_format(const char *s))()
 		{"x", print_x},
 		{"o", print_o},
 		{"X", print_X},
-		{"S", print_S}
+		{"S", print_S},
+		{"p", print_p}
 	};
 	int i;
 	const char *p = s;
