@@ -17,7 +17,8 @@ int (*verify_format(const char *s))()
 		{"u", print_u},
 		{"x", print_x},
 		{"o", print_o},
-		{"X", print_X}
+		{"X", print_X},
+		{"S", print_S}
 	};
 	int i;
 	const char *p = s;
@@ -25,7 +26,7 @@ int (*verify_format(const char *s))()
 	p++;
 	if (*p != '\0')
 	{
-		for (i = 0; i < 10; i++)
+		for (i = 0; i < 11; i++)
 		{
 			if (*options[i].s == p[0])
 				return (options[i].f);

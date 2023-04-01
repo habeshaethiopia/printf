@@ -46,4 +46,6 @@ int print_u(va_list arg, char *buff);
 int print_o(va_list arg, char *buff);
 int print_x(va_list arg, char *buff);
 int print_X(va_list arg, char *buff);
+
+int print_S(va_list arg, char *buff);
 #endif
