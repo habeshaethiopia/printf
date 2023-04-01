@@ -62,5 +62,6 @@ int print_X(va_list arg, char *buff);
 int print_S(va_list arg, char *buff);
 int print_p(va_list arg, char *buff);
 int print_r(va_list arg, char *buff);
+int print_R(va_list args, char *buffer);
 
 #endif

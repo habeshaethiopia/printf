@@ -13,8 +13,6 @@ int _printf(const char *format, ...)
 	int (*fun)();
 	char *buffer = init_buff();
 	va_list arg;
-	flags_t flags = {0, 0, 0};
-
 
 	if (buffer == NULL)
 		return (0);
