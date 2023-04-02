@@ -8,11 +8,12 @@
 int _printf(const char *format, ...)
 {
 	int len = 0;
-	const char *p, *buffer = init_buff();
+	const char *p;
 	int (*fun)(va_list, char *);
 	va_list arg;
+	char *buffer = init_buff();
 
-	if (buffer == NULL)
+	if (!buffer)
 		return (0);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
@@ -28,7 +29,6 @@ int _printf(const char *format, ...)
 			if (fun)
 			{
 				len += fun(arg, buffer);
-				(*(p + 1) >= '0' && *(p + 1) <= '9') ? p++ : NULL;
 				p++;
 			}
 			else
