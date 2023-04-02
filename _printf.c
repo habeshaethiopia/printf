@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int len = 0;
 	const char *p;
-	int (*fun)(va_list ,char *);
+	int (*fun)(va_list, char *);
 	char *buffer = init_buff();
 	va_list arg;
 
