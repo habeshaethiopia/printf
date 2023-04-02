@@ -12,7 +12,7 @@ int print_char(va_list arg, char *buff)
 	char c = va_arg(arg, int);
 
 	if (c == '\0')
-		i = 1;
+		c = 0;
 	_putchar(buff, c);
 	return (i);
 }
