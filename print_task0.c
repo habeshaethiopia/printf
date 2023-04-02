@@ -8,13 +8,14 @@
  */
 int print_char(va_list arg, char *buff)
 {
+	int i = 1;
 	char c = va_arg(arg, int);
 
 	if (c == '\0')
-		c = '\n';
+		i = 0;
 	_putchar(buff, c);
 	fflush(stdout);
-	return (1);
+	return (i);
 }
 /**
  * print_percent - prints percent sign
