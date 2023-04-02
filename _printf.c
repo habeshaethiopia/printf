@@ -5,13 +5,11 @@
  * Return: the number of character printed excluding the terminate character
  *
  */
-
 int _printf(const char *format, ...)
 {
 	int len = 0;
-	const char *p;
+	const char *p, *buffer = init_buff();
 	int (*fun)(va_list, char *);
-	char *buffer = init_buff();
 	va_list arg;
 
 	if (buffer == NULL)
@@ -30,6 +28,7 @@ int _printf(const char *format, ...)
 			if (fun)
 			{
 				len += fun(arg, buffer);
+				(*(p + 1) >= '0' && *(p + 1) <= '9') ? p++ : NULL;
 				p++;
 			}
 			else

@@ -27,6 +27,10 @@ int (*verify_format(const char *s))()
 	const char *p = s;
 
 	p++;
+	if (*p >= '0' && *p <= '9')
+	{
+		p++;
+	}
 	if (*p != '\0')
 	{
 		for (i = 0; i < 14; i++)
