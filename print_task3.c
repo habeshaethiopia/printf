@@ -9,7 +9,7 @@
 int print_number_u(unsigned int num, char *buff)
 {
 	unsigned int a, l;
-	int len;
+	int len = 0;
 
 	a = 1;
 	l = num;
@@ -25,7 +25,7 @@ int print_number_u(unsigned int num, char *buff)
 		len++;
 	}
 	_putchar(buff, num % 10 + '0');
-	return (++len);
+	return (len + 1);
 }
 /**
  * print_u - print unsigned int
