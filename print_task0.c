@@ -10,7 +10,7 @@ int print_char(va_list arg, char *buff)
 {
 	char c = va_arg(arg, int);
 
-		buffer_add(buff, c);
+	buffer_add(buff, c);
 	return (1);
 }
 /**
