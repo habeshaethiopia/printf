@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int len = 0;
 	const char *p;
-	int (*fun)();
+	int (*fun)(va_list ,char *);
 	char *buffer = init_buff();
 	va_list arg;
 
@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 	va_start(arg, format);
-	for (p = format; *p; p++)
+	for (p = format; *p != '\0'; p++)
 	{
 		if (*p == '%')
 		{

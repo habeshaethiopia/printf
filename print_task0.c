@@ -23,11 +23,16 @@ int print_char(va_list arg, char *buff)
  */
 int print_percent(va_list arg, char *buff)
 {
-	char *s = va_arg(arg, char *);
+	va_list s;
+	char *vi = "";
+	int x;
 
-	s++;
+	va_copy(s, arg);
+	vi = va_arg(s, char *);
 	_putchar(buff, '%');
-	return (1);
+	x = atoi(vi);
+	x = 1;
+	return (x);
 }
 /**
  * print_string - print a string
